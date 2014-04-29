@@ -15,7 +15,8 @@
                                     phploc,
                                     phpcs,
                                     phpmd,
-                                    phpcpd" />
+                                    phpcpd,
+                                    phpunit" />
 
     <target name="lint-php"
             description="Check all PHP files for syntax error using phplint"
