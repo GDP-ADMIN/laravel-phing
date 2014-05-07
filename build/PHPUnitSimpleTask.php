@@ -95,10 +95,11 @@ class PHPUnitSimpleTask extends Task {
             $copy = copy($this->phpunit, $this->template);
             echo "Executing $cmd\n";
             $phpunit = exec($cmd,$output,$return);
+            $out = implode("\n", $output);
             copy($backup, $this->template);
             unlink($backup);
             if ($return != 0) {
-                throw new BuildException($output);
+                throw new BuildException($out);
             }
         } else {
             echo "Could not find file: $this->phplist";
