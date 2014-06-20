@@ -17,6 +17,12 @@
                                     phpmd,
                                     phpcpd,
                                     phpunit" />
+                                    
+    <target name="analyzeNoTest" depends="init,
+                                          phploc,
+                                          phpcs,
+                                          phpmd,
+                                          phpcpd" />
 
     <target name="lint-php"
             description="Check all PHP files for syntax error using phplint"
